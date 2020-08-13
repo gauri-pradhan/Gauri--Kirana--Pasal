@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .header {
+            /* border: 1px solid green; */
+            background-color: #333;
+            /* position: sticky; */
+        }
+        
+        nav {
+            height: 50px;
+            /* position: sticky; */
+            /* border: 1px solid red; */
+            width: 80%;
+            margin: auto;
+        }
+        
+        nav h4 {
+            display: inline;
+            position: absolute;
+        }
+        
+        nav h4 a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        #navbar ul {
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: flex-end;
+        }
+        
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+        
+        #navbar ul li a {
+            color: rgb(12, 0, 0);
+            display: block;
+            padding: 14px 16px;
+            border-radius: 7px;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+        }
+        
+        #navbar ul li a:hover {
+            color: black;
+            background-color: rgb(202, 16, 78);
+        }
+        
+        #navbar ul li a {
+            font-size: 1rem;
+            padding: 0px 7px;
+            padding-bottom: 8px;
+        }
+        
+        #navbar a.active {
+            background-color: rgb(202, 16, 78);
+            color: white;
+        }
+        
+        .main-body {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .main-div {
+            border: 1px solid gray;
+            width: 500px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            padding: 50px 0 50px 0;
+        }
+        
+        .content-div {
+            width: 347px;
+        }
+        
+        h1 {
+            color: #19539F;
+        }
+        
+        h2,
+        form {
+            margin-top: 20px;
+        }
+        
+        p,
+        input {
+            margin-top: 10px;
+        }
+        
+        section {
+            margin-top: 20px;
+        }
+        
+        input {
+            width: 100%;
+            height: 32px;
+        }
+        
+        .btn {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        button {
+            padding: 10px 59px;
+            border: none;
+            background-color: transparent;
+            border: #19539F 1px solid;
+        }
+        
+        button:hover {
+            background-color: #19539F;
+            color: white;
+        }
+        
+        .forget-link {
+            margin-top: 30px;
+        }
+        
+        .active {
+            background-color: #19539F;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <nav id="navbar">
+            <h4><a href="index.html">HOSPITAL RECOMMENDATION</a> </h4>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="signin.html">Login</a></li>
+                <li><a href="signup.html">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="main-body">
+        <div class="main-div">
+            <div class="content-div">
+                <h1>Welcome Back!</h1>
+                <h2>Register here</h2>
+                <p>to get best hospital recommendetion around you.</p>
+                <form>
+                    <section>
+                        <label for="name">Your Name</label><br />
+                        <input type="name" id="name" required/>
+                    </section>
+                    <section>
+                        <label for="email">Email</label><br/>
+                        <input type="email" id="email" required/>
+                    </section>
+                    <section>
+                        <label for="password">Password</label><br />
+                        <input type="password" id="password" required/>
+                    </section>
+                    <section>
+                        <label for="password">Confirm Password</label><br />
+                        <input type="password" id="password" required/>
+                    </section>
+                    <section class="btn">
+                        <button class="active">Sign Up</button>
+
+                    </section>
+
+                    <p>
+                        Learn more about our product<a href="#"><strong> here.</strong></a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
