@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOSPITAL RECOMMENDATION SYSTEM|HRS|</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
     <style>
         * {
             margin: 0;
@@ -16,29 +17,24 @@
             background-color: rgb(233, 207, 193);
         }
         
-        .mainbody {
-            width: 80%;
-            margin: auto;
-            /* border: 1px solid black; */
-        }
-        
         header {
             /* border: 1px solid green; */
             background-color: #333;
-            /* position: sticky; */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
         }
         
         nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             height: 50px;
             /* position: sticky; */
             /* border: 1px solid red; */
             width: 80%;
             margin: auto;
-        }
-        
-        nav h4 {
-            display: inline;
-            position: absolute;
         }
         
         nav h4 a {
@@ -84,57 +80,59 @@
         }
         /* end of navigation section */
         
-        .middlebody img {
-            width: 100%;
+        .mainbody {
+            width: 80%;
+            margin: auto;
+            /* border: 1px solid black; */
         }
         
         .middlebody {
-            position: relative;
-            display: inline-block;
-            margin-top: 20px;
-            /* Make the width of box same as image */
+            background-image: url("image/hrs.jpg");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
-        .middlebody .texts {
-            position: absolute;
-            z-index: 999;
-            margin: 0 auto;
-            left: 0;
-            right: 0;
-            text-align: center;
-            top: 40%;
-            /* Adjust this value to move the positioned div up and down */
-            /* background: rgba(0, 0, 0, 0.8); */
-            font-family: Arial, sans-serif;
-            color: rgb(0, 0, 0);
-            width: 60%;
-        }
-        
-        .maintext {
-            font-size: 30px;
+        .slogan {
+            font-size: 50px;
             font-weight: bold;
-            color: rgb(0 0 0);
-            -webkit-text-stroke: 1px rgb(43 76 171);
         }
+        
+        .tofind {
+            margin-top: 20px;
+        }
+        /* .tofind p {
+            margin-right: 10px;
+            display: block;
+            font-size: 24px;
+        } */
         
         .btnsignin {
-            background-color: white;
-            color: black;
-            padding: 3px;
+            padding: 10px 59px;
+            border: none;
+            background-color: #19539F;
+        }
+        
+        .btnsignin a {
+            color: white;
+            text-decoration: none;
         }
         
         .btnsignin:hover {
-            color: cadetblue;
-            font-weight: bold;
-            padding: 3px;
+            background-color: transparent;
+            border: #19539F 1px solid;
         }
         /* box section  */
         
         #boxes {
             /* border: 1px solid black; */
             height: 200px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
         
         .box {
@@ -347,6 +345,7 @@
 
 <body>
     <div class="main">
+
         <header>
             <nav id="navbar">
                 <h4><a href="index.html">HOSPITAL RECOMMENDATION</a> </h4>
@@ -357,16 +356,22 @@
                 </ul>
             </nav>
         </header>
+
+
+
+
         <div class="mainbody">
             <div class="middlebody">
-                <img src="image/hrs.jpg" alt="hospital images">
+
                 <div class="texts">
-                    <h3>HOSPITAL RECOMMENDATION</h3>
-                    <p class="maintext">"We are concerned aboutyour health and time.</p>
-                    <P class="italic" style="font-style: italic;">for hospital recommendation <button class="btnsignin"><a href="signin.html">Sign IN</a></button>here.</P>
+                    <!-- <h3>HOSPITAL RECOMMENDATION</h3> -->
+                    <p class="slogan">We are concerned about <br> your health and time.</p>
+                    <div class="tofind">
+                        <!-- <p>To find hospital </p> -->
+                        <button class="btnsignin"><a href="pages/signin.html">Sign In</a></button>
+                    </div>
+
                 </div>
-
-
 
             </div>
 
@@ -573,6 +578,10 @@
                 modal.style.display = "none";
             }
         }
+    </script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
     </script>
 
 
