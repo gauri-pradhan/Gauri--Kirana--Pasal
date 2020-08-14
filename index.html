@@ -10,7 +10,7 @@
         * {
             margin: 0;
             padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: sans-serif, Helvetica, Arial, 'Segoe UI', Tahoma, Verdana, sans-serif;
         }
         
         body {
@@ -56,7 +56,7 @@
         #navbar ul li a {
             color: rgb(12, 0, 0);
             display: block;
-            padding: 14px 16px;
+            /* padding: 14px 16px; */
             border-radius: 7px;
             text-decoration: none;
             text-align: center;
@@ -70,8 +70,9 @@
         
         #navbar ul li a {
             font-size: 1rem;
-            padding: 0px 7px;
-            padding-bottom: 8px;
+            /* padding: 0px 7px; */
+            /* padding-bottom: 8px; */
+            padding: 8px 16px;
         }
         
         #navbar a.active {
@@ -147,7 +148,7 @@
         .boximage {
             display: block;
             width: 100%;
-            height: 50%;
+            height: 60%;
             margin: auto;
             /* border-radius: 40px; */
             padding-bottom: 10px;
@@ -161,7 +162,8 @@
         }
         
         .boxtxt {
-            font-size: px;
+            font-size: 15px;
+            padding: 4px;
         }
         
         .text p {
@@ -174,14 +176,36 @@
             /* margin-top: 20px; */
             display: flex;
             justify-content: space-between;
+            box-sizing: border-box;
         }
         
         .about {
-            width: 40%;
+            width: 45%;
             /* height: 200px; */
             /* border: 1px solid blue; */
-            text-align: center;
+            /* text-align: center; */
             background-color: grey;
+            padding: 5px 5% 0 5%;
+            box-sizing: border-box;
+        }
+        
+        .aboutimg {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .about h4 {
+            /* align-items: center; */
+            font-size: 30px;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        
+        .about p {
+            margin-top: 10px;
         }
         /* contact section starts here */
         
@@ -190,8 +214,12 @@
         }
         
         #contact {
-            background: #dbcaca;
-            padding-left: 25px;
+            /* background: #dbcaca; */
+            background: grey;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 5px;
+            padding-bottom: 5px;
             margin: 0;
         }
         
@@ -297,6 +325,7 @@
         footer {
             margin-top: 20px;
             background-color: #333;
+            color: white;
         }
         /* The Modal (background) */
         
@@ -305,7 +334,7 @@
             /* Hidden by default */
             position: fixed;
             /* Stay in place */
-            z-index: 9999;
+            z-index: 1;
             /* Sit on top */
             padding-top: 100px;
             /* Location of the box */
@@ -392,11 +421,11 @@
                         <button id="myBtna"> <h4 class="boxtxt">Ambulance</h4></button>
 
                         <!-- The Modal -->
-                        <div id="myModala" class="modal">
+                        <div id="myModala" class="modal modala">
 
                             <!-- Modal content -->
                             <div class="modal-content">
-                                <span class="close">&times;</span>
+                                <span class="close closea">&times;</span>
                                 <p>List of ambulance<br>one two---999<br> one two---999<br>one two---999<br>one two---999<br></p>
                             </div>
 
@@ -415,12 +444,21 @@
                         <button id="myBtnb">  <h4 class="boxtxt">Blood Banks</h4></button>
 
                         <!-- The Modal -->
-                        <div id="myModalb" class="modal">
+                        <div id="myModalb" class="modal modalb">
 
                             <!-- Modal content -->
                             <div class="modal-content">
-                                <span class="close">&times;</span>
-                                <p>List of bloodbanks<br>one two---999<br> one two---999<br>one two---999<br>one two---999<br></p>
+                                <span class="close closeb">&times;</span>
+                                <p>List of bloodbanks |Credit To MRR Group|<br>
+                                    <a href="BloodDatabase2020/A Negative.html">A Negative</a><br>
+                                    <a href="BloodDatabase2020/A Positive.html">A Positive</a><br>
+                                    <a href="BloodDatabase2020/AB Negative.html">AB Negative</a><br>
+                                    <a href="BloodDatabase2020/A Positive.html">AB Positive</a><br>
+                                    <a href="BloodDatabase2020/B Negative.html">B Negative</a><br>
+                                    <a href="BloodDatabase2020/B Positive.html">B Positive</a><br>
+                                    <a href="BloodDatabase2020/O Negative.html">O Negative</a><br>
+                                    <a href="BloodDatabase2020/O Positive.html">O Positive</a><br>
+                                </p>
                             </div>
 
                         </div>
@@ -439,11 +477,11 @@
                         <button id="myBtnc"><h4 class="boxtxt">Nearby Hospital</h4></button>
 
                         <!-- The Modal -->
-                        <div id="myModalc" class="modal">
+                        <div id="myModalc" class="modal modalc">
 
                             <!-- Modal content -->
                             <div class="modal-content">
-                                <span class="close">&times;</span>
+                                <span class="close closec">&times;</span>
                                 <p>List of hospital<br>one two---999<br> one two---999<br>one two---999<br>one two---999<br>.</p>
                             </div>
 
@@ -459,6 +497,7 @@
 
             <div class="aboutsection">
                 <div class="about">
+
                     <h4>About Us</h4>
                     <p>We're healthcare Inc. etc etc etc Get to know us > Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur earum natus dicta repellat aut molestias, deserunt dolore modi delectus cum ipsam non quos? Maiores provident aspernatur
                         consectetur, dolor sit incidunt aperiam ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure explicabo quasi ea. Quisquam enim similique laborum iure porro itaque laudantium, culpa tenetur eius reiciendis inventore,
@@ -507,13 +546,12 @@
 
 
 
-
     <script>
-        // all selected 
+        // all selected
         // const modala = document.getElementById('myModala');
         // const modalb = document.getElementById('myModalb');
         // const modalc = document.getElementById('myModalc');
-        // const span = document.getElementById('close');
+        // const span = document.querySelector('.close');
 
         // const btna = document.getElementById('myBtna');
         // const btnb = document.getElementById('myBtnb');
@@ -521,8 +559,6 @@
 
         // btna.onclick = () => {
         //     modala.style.display = 'block';
-        //     close(modala);
-
         // }
 
         // btnb.onclick = () => {
@@ -536,14 +572,25 @@
         // }
 
 
-        // const close = (modal) => {
-        //     span.onclick = (modal) => {
-        //         modal.style.display = 'none';
-        //     }
+        // span.onclick = function() {
+        //     console.log('hello');
+        //     modala.style.display = "none";
+        // }
+
+        // span.onclick = function() {
+        //     modalb.style.display = "none";
+        // }
+
+        // span.onclick = function() {
+        //     modalc.style.display = "none";
         // }
 
 
 
+
+
+        // code from we3scholl
+        // Get the modal
         var modala = document.getElementById("myModala");
         var modalb = document.getElementById("myModalb");
         var modalc = document.getElementById("myModalc");
@@ -554,9 +601,9 @@
         var btnc = document.getElementById("myBtnc");
 
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-        var span = document.getElementsByClassName("close")[0];
-        var span = document.getElementsByClassName("close")[0];
+        var span1 = document.getElementsByClassName("closea")[0];
+        var span2 = document.getElementsByClassName("closeb")[0];
+        var span3 = document.getElementsByClassName("closec")[0];
 
         // When the user clicks the button, open the modal 
         btna.onclick = function() {
@@ -565,39 +612,32 @@
         btnb.onclick = function() {
             modalb.style.display = "block";
         }
-
         btnc.onclick = function() {
             modalc.style.display = "block";
         }
 
 
+
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
+        span1.onclick = function() {
             modala.style.display = "none";
         }
-        span.onclick = function() {
+        span2.onclick = function() {
             modalb.style.display = "none";
         }
-
-        span.onclick = function() {
+        span3.onclick = function() {
             modalc.style.display = "none";
         }
 
 
+
         // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modala) {
-                modala.style.display = "none";
-            }
-        }
+
+
         window.onclick = function(event) {
             if (event.target == modalb) {
                 modalb.style.display = "none";
-            }
-        }
-        window.onclick = function(event) {
-            if (event.target == modalc) {
-                modalc.style.display = "none";
+
             }
         }
     </script>
