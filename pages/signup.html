@@ -12,23 +12,28 @@
             font-family: Arial, Helvetica, sans-serif;
         }
         
+        body {
+            background-color: rgb(233, 207, 193);
+        }
+        
         .header {
             /* border: 1px solid green; */
             background-color: #333;
-            /* position: sticky; */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
         }
         
         nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             height: 50px;
             /* position: sticky; */
             /* border: 1px solid red; */
             width: 80%;
             margin: auto;
-        }
-        
-        nav h4 {
-            display: inline;
-            position: absolute;
         }
         
         nav h4 a {
@@ -50,7 +55,7 @@
         #navbar ul li a {
             color: rgb(12, 0, 0);
             display: block;
-            padding: 14px 16px;
+            /* padding: 14px 16px; */
             border-radius: 7px;
             text-decoration: none;
             text-align: center;
@@ -64,8 +69,9 @@
         
         #navbar ul li a {
             font-size: 1rem;
-            padding: 0px 7px;
-            padding-bottom: 8px;
+            /* padding: 0px 7px; */
+            /* padding-bottom: 8px; */
+            padding: 8px 16px;
         }
         
         #navbar a.active {
@@ -148,7 +154,7 @@
         <nav id="navbar">
             <h4><a href="../index.html">HOSPITAL RECOMMENDATION</a> </h4>
             <ul>
-                <li><a class="active" href="index.html">Home</a></li>
+                <li><a class="active" href="../index.html">Home</a></li>
                 <li><a href="signin.html">Login</a></li>
                 <li><a href="signup.html">Register</a></li>
             </ul>
@@ -184,7 +190,7 @@
                     </section>
 
                     <p>
-                        Learn more about our product<a href="#"><strong> here.</strong></a>
+                        Learn more about our services.<a href="../index.html#contact"><strong> here.</strong></a>
                     </p>
                 </form>
             </div>
