@@ -130,9 +130,11 @@
         
         #boxes {
             /* border: 1px solid black; */
-            height: 200px;
             margin-top: 50px;
             margin-bottom: 50px;
+            justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
         }
         
         .box {
@@ -143,18 +145,23 @@
         }
         
         .boximage {
-            padding-top: 9px;
             display: block;
-            width: 90px;
-            height: 90px;
+            width: 100%;
+            height: 50%;
             margin: auto;
-            border-radius: 40px;
+            /* border-radius: 40px; */
+            padding-bottom: 10px;
         }
         
         .text {
             margin-top: 10px;
             margin-left: 10px;
             text-align: center;
+            padding-bottom: 10px;
+        }
+        
+        .boxtxt {
+            font-size: px;
         }
         
         .text p {
@@ -162,9 +169,9 @@
         }
         
         .aboutsection {
-            width: 100%;
+            /* width: 100%; */
             /* border: 1px solid green; */
-            margin-top: 20px;
+            /* margin-top: 20px; */
             display: flex;
             justify-content: space-between;
         }
@@ -298,7 +305,7 @@
             /* Hidden by default */
             position: fixed;
             /* Stay in place */
-            z-index: 999;
+            z-index: 9999;
             /* Sit on top */
             padding-top: 100px;
             /* Location of the box */
@@ -375,27 +382,27 @@
 
             </div>
 
-            <div id="boxes" style=" justify-content: space-between;
-            display: flex;flex-wrap: wrap;">
+            <div id="boxes">
 
                 <div class="box">
                     <img class="boximage" src="image/ambulance.png" alt="">
                     <div class="text">
-                        <h4>
-                            <!-- Trigger/Open The Modal -->
-                            <button id="myBtna">Ambulance</button>
 
-                            <!-- The Modal -->
-                            <div id="myModala" class="modal">
+                        <!-- Trigger/Open The Modal -->
+                        <button id="myBtna"> <h4 class="boxtxt">Ambulance</h4></button>
 
-                                <!-- Modal content -->
-                                <div class="modal-content">
-                                    <span class="close closea">&times;</span>
-                                    <p>-Ambulance1------980020202020<br>-Ambulance1------980020202020<br>-Ambulance1------980020202020<br>-Ambulance1------980020202020<br></p>
-                                </div>
+                        <!-- The Modal -->
+                        <div id="myModala" class="modal">
 
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p>List of ambulance<br>one two---999<br> one two---999<br>one two---999<br>one two---999<br></p>
                             </div>
-                        </h4>
+
+                        </div>
+
+
                         <p>See where nearby ambulance is at.</p>
                     </div>
 
@@ -403,21 +410,22 @@
                 <div class="box">
                     <img class="boximage" src="image/blood.png" alt="">
                     <div class="text">
-                        <h4>
-                            <!-- Trigger/Open The Modal -->
-                            <button id="myBtnb">Blood Banks/Groups</button>
 
-                            <!-- The Modal -->
-                            <div id="myModalb" class="modal">
+                        <!-- Trigger/Open The Modal -->
+                        <button id="myBtnb">  <h4 class="boxtxt">Blood Banks</h4></button>
 
-                                <!-- Modal content -->
-                                <div class="modal-content">
-                                    <span class="close closeb">&times;</span>
-                                    <p>List of Blood banks and groups.<br>BLOOD1-----98393839<br>BLOOD1-----98393839<br>BLOOD1-----98393839<br>BLOOD1-----98393839<br>BLOOD1-----98393839<br>BLOOD1-----98393839<br>s</p>
-                                </div>
+                        <!-- The Modal -->
+                        <div id="myModalb" class="modal">
 
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p>List of bloodbanks<br>one two---999<br> one two---999<br>one two---999<br>one two---999<br></p>
                             </div>
-                        </h4>
+
+                        </div>
+
+
                         <p>Quick find location of hospital near by.</p>
                     </div>
 
@@ -426,21 +434,22 @@
                 <div class="box">
                     <img class="boximage" src="image/hospital.png" alt="">
                     <div class="text">
-                        <h4>
-                            <!-- Trigger/Open The Modal -->
-                            <button id="myBtnc">Nearby Hospital</button>
 
-                            <!-- The Modal -->
-                            <div id="myModalc" class="modal modalc">
+                        <!-- Trigger/Open The Modal -->
+                        <button id="myBtnc"><h4 class="boxtxt">Nearby Hospital</h4></button>
 
-                                <!-- Modal content -->
-                                <div class="modal-content">
-                                    <span class="close closec">&times;</span>
-                                    <p>List of nearby Hospital<br><a href="signin.html"><button>SignIN</button></a></p>
-                                </div>
+                        <!-- The Modal -->
+                        <div id="myModalc" class="modal">
 
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p>List of hospital<br>one two---999<br> one two---999<br>one two---999<br>one two---999<br>.</p>
                             </div>
-                        </h4>
+
+                        </div>
+
+
                         <p>see nearby hospitals here</p>
                     </div>
 
@@ -456,6 +465,7 @@
                         quidem obcaecati quam laboriosam odio dolor. Saepe?
                     </p>
                 </div>
+
                 <div class="container">
                     <form id="contact" action="" method="post">
                         <h3>Contact Us</h3>
@@ -476,9 +486,8 @@
                             <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
                         </fieldset>
                     </form>
-
-
                 </div>
+
             </div>
 
 
@@ -493,101 +502,106 @@
                 | Italiano |Deutsch |日本語 |فارسی | Other languages ...</p>
         </div>
     </footer>
+
+
+
+
+
+
     <script>
-        // Get the modal
-        var modal = document.getElementById("myModala");
+        // all selected 
+        // const modala = document.getElementById('myModala');
+        // const modalb = document.getElementById('myModalb');
+        // const modalc = document.getElementById('myModalc');
+        // const span = document.getElementById('close');
+
+        // const btna = document.getElementById('myBtna');
+        // const btnb = document.getElementById('myBtnb');
+        // const btnc = document.getElementById('myBtnc');
+
+        // btna.onclick = () => {
+        //     modala.style.display = 'block';
+        //     close(modala);
+
+        // }
+
+        // btnb.onclick = () => {
+        //     modalb.style.display = 'block';
+
+
+        // }
+        // btnc.onclick = () => {
+        //     modalc.style.display = 'block';
+
+        // }
+
+
+        // const close = (modal) => {
+        //     span.onclick = (modal) => {
+        //         modal.style.display = 'none';
+        //     }
+        // }
+
+
+
+        var modala = document.getElementById("myModala");
+        var modalb = document.getElementById("myModalb");
+        var modalc = document.getElementById("myModalc");
 
         // Get the button that opens the modal
-        var btn = document.getElementById("myBtna");
+        var btna = document.getElementById("myBtna");
+        var btnb = document.getElementById("myBtnb");
+        var btnc = document.getElementById("myBtnc");
 
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
+        var span = document.getElementsByClassName("close")[0];
+        var span = document.getElementsByClassName("close")[0];
 
         // When the user clicks the button, open the modal 
-        btn.onclick = function() {
-            modal.style.display = "block";
+        btna.onclick = function() {
+            modala.style.display = "block";
         }
+        btnb.onclick = function() {
+            modalb.style.display = "block";
+        }
+
+        btnc.onclick = function() {
+            modalc.style.display = "block";
+        }
+
 
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
-            modal.style.display = "none";
+            modala.style.display = "none";
         }
+        span.onclick = function() {
+            modalb.style.display = "none";
+        }
+
+        span.onclick = function() {
+            modalc.style.display = "none";
+        }
+
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+            if (event.target == modala) {
+                modala.style.display = "none";
             }
         }
-
-
-        // this is for button 2
-        // Get the modal
-        var modal = document.getElementById("myModalb");
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtnb");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+            if (event.target == modalb) {
+                modalb.style.display = "none";
             }
         }
-
-
-
-
-        // this is for buttom 3
-
-        // Get the modal
-        var modal = document.getElementById("myModalc");
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtnc");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+            if (event.target == modalc) {
+                modalc.style.display = "none";
             }
         }
     </script>
-
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
-    </script>
-
-
-
 </body>
 
-</script>
 
 </html>
