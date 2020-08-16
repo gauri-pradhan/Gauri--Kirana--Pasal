@@ -5,643 +5,448 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOSPITAL RECOMMENDATION SYSTEM|HRS|</title>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif, Helvetica, Arial, 'Segoe UI', Tahoma, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: rgb(233, 207, 193);
-        }
-        
-        header {
-            /* border: 1px solid green; */
-            background-color: #333;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 50px;
-            /* position: sticky; */
-            /* border: 1px solid red; */
-            width: 80%;
-            margin: auto;
-        }
-        
-        nav h4 a {
-            text-decoration: none;
-            color: white;
-        }
-        
-        #navbar ul {
-            display: flex;
-            font-family: Arial, Helvetica, sans-serif;
-            justify-content: flex-end;
-        }
-        
-        #navbar ul li {
-            list-style: none;
-            font-size: 1.3rem;
-        }
-        
-        #navbar ul li a {
-            color: rgb(12, 0, 0);
-            display: block;
-            /* padding: 14px 16px; */
-            border-radius: 7px;
-            text-decoration: none;
-            text-align: center;
-            color: white;
-        }
-        
-        #navbar ul li a:hover {
-            color: black;
-            background-color: rgb(202, 16, 78);
-        }
-        
-        #navbar ul li a {
-            font-size: 1rem;
-            /* padding: 0px 7px; */
-            /* padding-bottom: 8px; */
-            padding: 8px 16px;
-        }
-        
-        #navbar a.active {
-            background-color: rgb(202, 16, 78);
-            color: white;
-        }
-        /* end of navigation section */
-        
-        .mainbody {
-            width: 80%;
-            margin: auto;
-            /* border: 1px solid black; */
-        }
-        
-        .middlebody {
-            background-image: url("image/hrs.jpg");
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 100vh;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .slogan {
-            font-size: 50px;
-            font-weight: bold;
-        }
-        
-        .tofind {
-            margin-top: 20px;
-        }
-        /* .tofind p {
-            margin-right: 10px;
-            display: block;
-            font-size: 24px;
-        } */
-        
-        .btnsignin {
-            padding: 10px 59px;
-            border: none;
-            background-color: #19539F;
-        }
-        
-        .btnsignin a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        .btnsignin:hover {
-            background-color: transparent;
-            border: #19539F 1px solid;
-        }
-        /* box section  */
-        
-        #boxes {
-            /* border: 1px solid black; */
-            margin-top: 50px;
-            margin-bottom: 50px;
-            justify-content: space-between;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        
-        .box {
-            border: 1px solid green;
-            width: 30%;
-            background-color: grey;
-            box-sizing: border-box;
-        }
-        
-        .boximage {
-            display: block;
-            width: 100%;
-            height: 60%;
-            margin: auto;
-            /* border-radius: 40px; */
-            padding-bottom: 10px;
-        }
-        
-        .text {
-            margin-top: 10px;
-            margin-left: 10px;
-            text-align: center;
-            padding-bottom: 10px;
-        }
-        
-        .boxtxt {
-            font-size: 15px;
-            padding: 4px;
-        }
-        
-        .text p {
-            margin-top: 10px;
-        }
-        
-        .aboutsection {
-            /* width: 100%; */
-            /* border: 1px solid green; */
-            /* margin-top: 20px; */
-            display: flex;
-            justify-content: space-between;
-            box-sizing: border-box;
-        }
-        
-        .about {
-            width: 45%;
-            /* height: 200px; */
-            /* border: 1px solid blue; */
-            /* text-align: center; */
-            background-color: grey;
-            padding: 5px 5% 0 5%;
-            box-sizing: border-box;
-        }
-        
-        .aboutimg {
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .about h4 {
-            /* align-items: center; */
-            font-size: 30px;
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
-        }
-        
-        .about p {
-            margin-top: 10px;
-        }
-        /* contact section starts here */
-        
-        .container {
-            width: 50%;
-        }
-        
-        #contact {
-            /* background: #dbcaca; */
-            background: grey;
-            padding-left: 5%;
-            padding-right: 5%;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            margin: 0;
-        }
-        
-        #contact input[type="text"],
-        #contact input[type="email"],
-        #contact input[type="tel"],
-        #contact input[type="url"],
-        #contact textarea,
-        #contact button[type="submit"] {
-            font: 400 12px/16px "Open Sans", Helvetica, Arial, sans-serif;
-        }
-        
-        #contact h3 {
-            color: #F96;
-            display: block;
-            font-size: 30px;
-            font-weight: 400;
-        }
-        
-        #contact h4 {
-            margin: 5px 0 15px;
-            display: block;
-            font-size: 13px;
-        }
-        
-        fieldset {
-            border: medium none !important;
-            margin: 0 0 10px;
-            min-width: 90%;
-            padding: 0;
-            width: 90%;
-        }
-        
-        #contact input[type="text"],
-        #contact input[type="email"],
-        #contact input[type="tel"],
-        #contact input[type="url"],
-        #contact textarea {
-            width: 100%;
-            border: 1px solid #CCC;
-            background: #FFF;
-            margin: 0 0 5px;
-            padding: 10px;
-        }
-        
-        #contact input[type="text"]:hover,
-        #contact input[type="email"]:hover,
-        #contact input[type="tel"]:hover,
-        #contact input[type="url"]:hover,
-        #contact textarea:hover {
-            -webkit-transition: border-color 0.3s ease-in-out;
-            -moz-transition: border-color 0.3s ease-in-out;
-            transition: border-color 0.3s ease-in-out;
-            border: 1px solid #AAA;
-        }
-        
-        #contact textarea {
-            height: 100px;
-            max-width: 100%;
-            resize: none;
-        }
-        
-        #contact button[type="submit"] {
-            cursor: pointer;
-            width: 100%;
-            border: none;
-            background: #0CF;
-            color: #FFF;
-            margin: 0 0 5px;
-            padding: 10px;
-            font-size: 15px;
-        }
-        
-        #contact button[type="submit"]:hover {
-            background: #09C;
-            -webkit-transition: background 0.3s ease-in-out;
-            -moz-transition: background 0.3s ease-in-out;
-            transition: background-color 0.3s ease-in-out;
-        }
-        
-        #contact input:focus,
-        #contact textarea:focus {
-            outline: 0;
-            border: 1px solid #999;
-        }
-        
-         ::-webkit-input-placeholder {
-            color: #888;
-        }
-        
-         :-moz-placeholder {
-            color: #888;
-        }
-        
-         ::-moz-placeholder {
-            color: #888;
-        }
-        
-         :-ms-input-placeholder {
-            color: #888;
-        }
-        
-        footer {
-            margin-top: 20px;
-            background-color: #333;
-            color: white;
-        }
-        /* The Modal (background) */
-        
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            padding-top: 100px;
-            /* Location of the box */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
-        }
-        /* Modal Content */
-        
-        .modal-content {
-            background-color: #fefefe;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-        }
-        /* The Close Button */
-        
-        .close {
-            color: #aaaaaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        
-        .close:hover,
-        .close:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <link rel="stylesheet" href="css/navbar.css" type="text/css">
+
+    <!-- <script src="js/navscript.js" defer></script> -->
 </head>
+<style>
+* {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.4;
+    }
+    
+    html {
+        color: #333;
+        background: rgb(206, 206, 206);
+    }
+    
+    .hsptlname {
+        font-size: 1rem;
+        background: var(--dark);
+        color: var(--light);
+        text-align: center;
+        padding: 0.5rem;
+        position: sticky;
+        top: 0;
+        position: -webkit-sticky;
+        height: 50px;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    .mainbody {
+        display: grid;
+        grid-gap: 25px;
+        margin: 10px 10% 30px 10%;
+    }
+    /* Navigation */
+    
+    .main-nav ul {
+        display: grid;
+        grid-gap: 5px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+    .main-nav a {
+        background: var(--primary);
+        display: block;
+        text-decoration: none;
+        padding: 0.6rem;
+        text-align: center;
+        color: var(--dark);
+        font-size: 1.1rem;
+        box-shadow: var(--shadow);
+        border-radius: 7px;
+    }
+    
+    .main-nav .activea {
+        background: rgb(67, 111, 114);
+    }
+    
+    .main-nav a:hover {
+        background: rgb(67, 111, 114);
+        color: var(--light);
+    }
+    /* middle body section */
+    
+    .middlebody {
+        grid-area: showcase;
+        height: 100vh;
+        background: url(image/hrs.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        box-shadow: var(--shadow);
+    }
+    
+    .middlebody h1 {
+        font-size: 3rem;
+        margin-bottom: 0;
+        d color: var(--dark);
+    }
+    
+    .middlebody p {
+        font-size: 1.3rem;
+        margin-top: 0;
+        color: var(--dark);
+    }
+    /* Boxes */
+    
+    .boxes {
+        display: grid;
+        grid-gap: 20px;
+        height: auto;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .box {
+        background: var(--primary);
+        text-align: center;
+        padding: 1.5rem 2rem;
+        box-shadow: var(--shadow);
+    }
+    
+    .boxptext {
+        margin: 10px 0;
+    }
+    
+    .box img {
+        height: 160px;
+        /* max-width: 100%; */
+        width: 70%;
+    }
+    
+    .box h3 {
+        font-size: 1rem;
+    }
+    /* Info */
+    
+    .about {
+        background: var(--primary);
+        box-shadow: var(--shadow);
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 3rem;
+    }
+    /* Footer */
+    
+    footer {
+        margin-top: 20px;
+        text-align: center;
+        background: var(--dark);
+        color: var(--font);
+        padding: 5px;
+    }
+    
+     :root {
+        --primary: #ddd;
+        --font: rgb(206, 194, 194);
+        --dark: rgb(43, 42, 42);
+        --light: rgb(206, 194, 194);
+        --shadow: 0 6px 6px rgba(139, 143, 140, 0.8);
+    }
+    /* contact section  */
+    
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    
+    input[type=submit] {
+        background-color: var(--dark);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+    
+    .btn {
+        background: var(--dark);
+        color: var(--font);
+        padding: 5px;
+        text-decoration: none;
+        border: 0;
+    }
+    
+    @media(min-width: 751px) {
+        .main-nav {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 750px) {
+        /* .img{
+        width: 100%;
+    } */
+        .header {
+            display: none;
+        }
+        .middlebody h1 {
+            font-size: 2.5rem;
+        }
+        .main-nav ul {
+            grid-template-columns: 1fr;
+            row-gap: 5px;
+            width: 20%;
+            position: fixed;
+            right: 1%;
+            top: 5%;
+            margin-bottom: 0;
+        }
+        .about .btn {
+            /* display: inline-block; */
+            margin: auto;
+            text-align: center;
+            display: block;
+        }
+        .about {
+            grid-template-columns: 1fr;
+        }
+        .popup {
+            width: 70%;
+        }
+    }
+}
+.button:hover {
+    background: #06D85F;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 50%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+.popup h2 {
+    margin-top: 10px;
+    padding: 0;
+    font-size: 15px;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    transition: all 200ms;
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(199, 16, 16);
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    padding: 3px 5px 3px 5px;
+}
+.popup .close:hover {
+    color: #000000;
+}
+.popup .content {
+    overflow: auto;
+    margin-top: 10px;
+}
+.popup .content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    margin: 10px auto;
+    background: #ccc;
+    font-weight: bolder;
+    /* margin: 5px auto; */
+}
+.popup .content a:hover {
+    background-color: var(--dark);
+    color: var(--font);
+}
+</style>
 
 
 <body>
-    <div class="main">
 
-        <header>
-            <nav id="navbar">
-                <h4><a href="index.html">HOSPITAL RECOMMENDATION</a> </h4>
-                <ul>
-                    <li><a class="active" href="index.html">Home</a></li>
-                    <li><a href="pages/signin.html">Login</a></li>
-                    <li><a href="pages/signup.html">Register</a></li>
-                </ul>
-            </nav>
-        </header>
+    <h1 class="hsptlname">HOSPITAL RECOMMENDATION SYSTEM</h1>
+    <div class="header">
+        <nav id="navbar">
+            <h4><a href="index.html">HOSPITAL RECOMMENDATION SYSTEM</a> </h4>
 
-
-
-
-        <div class="mainbody">
-            <div class="middlebody">
-
-                <div class="texts">
-                    <!-- <h3>HOSPITAL RECOMMENDATION</h3> -->
-                    <p class="slogan">We are concerned about <br> your health and time.</p>
-                    <div class="tofind">
-                        <!-- <p>To find hospital </p> -->
-                        <button class="btnsignin"><a href="pages/signin.html">Sign In</a></button>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div id="boxes">
-
-                <div class="box">
-                    <img class="boximage" src="image/ambulance.png" alt="">
-                    <div class="text">
-
-                        <!-- Trigger/Open The Modal -->
-                        <button id="myBtna"> <h4 class="boxtxt">Ambulance</h4></button>
-
-                        <!-- The Modal -->
-                        <div id="myModala" class="modal modala">
-
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <span class="close closea">&times;</span>
-                                <p>List of ambulance<br>one two---999<br> one two---999<br>one two---999<br>one two---999<br></p>
-                            </div>
-
-                        </div>
-
-
-                        <p>See where nearby ambulance is at.</p>
-                    </div>
-
-                </div>
-                <div class="box">
-                    <img class="boximage" src="image/blood.png" alt="">
-                    <div class="text">
-
-                        <!-- Trigger/Open The Modal -->
-                        <button id="myBtnb">  <h4 class="boxtxt">Blood Banks</h4></button>
-
-                        <!-- The Modal -->
-                        <div id="myModalb" class="modal modalb">
-
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <span class="close closeb">&times;</span>
-                                <p>List of bloodbanks |Credit To MRR Group|<br>
-                                    <a href="BloodDatabase2020/A Negative.html">A Negative</a><br>
-                                    <a href="BloodDatabase2020/A Positive.html">A Positive</a><br>
-                                    <a href="BloodDatabase2020/AB Negative.html">AB Negative</a><br>
-                                    <a href="BloodDatabase2020/A Positive.html">AB Positive</a><br>
-                                    <a href="BloodDatabase2020/B Negative.html">B Negative</a><br>
-                                    <a href="BloodDatabase2020/B Positive.html">B Positive</a><br>
-                                    <a href="BloodDatabase2020/O Negative.html">O Negative</a><br>
-                                    <a href="BloodDatabase2020/O Positive.html">O Positive</a><br>
-                                </p>
-                            </div>
-
-                        </div>
-
-
-                        <p>Quick find location of hospital near by.</p>
-                    </div>
-
-                </div>
-
-                <div class="box">
-                    <img class="boximage" src="image/hospital.png" alt="">
-                    <div class="text">
-
-                        <!-- Trigger/Open The Modal -->
-                        <button id="myBtnc"><h4 class="boxtxt">Nearby Hospital</h4></button>
-
-                        <!-- The Modal -->
-                        <div id="myModalc" class="modal modalc">
-
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <span class="close closec">&times;</span>
-                                <p>List of hospital<br>one two---999<br> one two---999<br>one two---999<br>one two---999<br>.</p>
-                            </div>
-
-                        </div>
-
-
-                        <p>see nearby hospitals here</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="aboutsection">
-                <div class="about">
-
-                    <h4>About Us</h4>
-                    <p>We're healthcare Inc. etc etc etc Get to know us > Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur earum natus dicta repellat aut molestias, deserunt dolore modi delectus cum ipsam non quos? Maiores provident aspernatur
-                        consectetur, dolor sit incidunt aperiam ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure explicabo quasi ea. Quisquam enim similique laborum iure porro itaque laudantium, culpa tenetur eius reiciendis inventore,
-                        quidem obcaecati quam laboriosam odio dolor. Saepe?
-                    </p>
-                </div>
-
-                <div class="container">
-                    <form id="contact" action="" method="post">
-                        <h3>Contact Us</h3>
-                        <h4>Contact us today, and get reply with in 24 hours!</h4>
-                        <fieldset>
-                            <input placeholder="Your name" type="text" tabindex="1" required autofocus>
-                        </fieldset>
-                        <fieldset>
-                            <input placeholder="Your Email Address" type="email" tabindex="2" required>
-                        </fieldset>
-                        <fieldset>
-                            <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
-                        </fieldset>
-                        <fieldset>
-                            <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
-                        </fieldset>
-                        <fieldset>
-                            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-                        </fieldset>
-                    </form>
-                </div>
-
-            </div>
-
-
-
-
-        </div>
+            <ul>
+                <li><a class="active" href="../index.html">Home</a></li>
+                <li><a href="#aboutsection">About</a></li>
+                <li><a href="pages/signin.html">Login</a></li>
+                <li><a href="pages/signup.html">Register</a></li>
+            </ul>
+        </nav>
     </div>
-    <footer>
-        <div style="width: 80%; margin:auto">
 
-            <p>©2020 HRS Inc. <br/> language services, please call the number on your member ID card and request an operator. For other language services: Español | 中文 | Tiếng Việt |한국어 |Tagalog | Pусский | العربية | Kreyòl | Français | Polski | Português
-                | Italiano |Deutsch |日本語 |فارسی | Other languages ...</p>
-        </div>
-    </footer>
+    <div class="mainbody">
 
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <ul>
+                <li> <a class="activea" href="index.html">Home</a></li>
+                <li><a href="#aboutsection">About</a></li>
+                <li><a href="pages/signin.html">Login</a></li>
+                <li><a href="pages/signup.html">Register</a></li>
+            </ul>
+        </nav>
 
+        <!-- middlebodysection -->
+        <section class="middlesection">
+            <header class="middlebody">
+                <h1>"We care about your health and time"</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ipsam! Nihil quo minima nulla atque!</p>
+                <a href="pages/signin.html" class="btn">Get In</a>
+            </header>
 
+        </section>
 
-
-    <script>
-        // all selected
-        // const modala = document.getElementById('myModala');
-        // const modalb = document.getElementById('myModalb');
-        // const modalc = document.getElementById('myModalc');
-        // const span = document.querySelector('.close');
-
-        // const btna = document.getElementById('myBtna');
-        // const btnb = document.getElementById('myBtnb');
-        // const btnc = document.getElementById('myBtnc');
-
-        // btna.onclick = () => {
-        //     modala.style.display = 'block';
-        // }
-
-        // btnb.onclick = () => {
-        //     modalb.style.display = 'block';
-
-
-        // }
-        // btnc.onclick = () => {
-        //     modalc.style.display = 'block';
-
-        // }
-
-
-        // span.onclick = function() {
-        //     console.log('hello');
-        //     modala.style.display = "none";
-        // }
-
-        // span.onclick = function() {
-        //     modalb.style.display = "none";
-        // }
-
-        // span.onclick = function() {
-        //     modalc.style.display = "none";
-        // }
+        <!-- box section --ambulance blood hospital  -->
+        <section class="boxes">
+            <div class="box">
+                <img src="image/ambulance.png" alt="ambulance.png">
+                <div class="boxptext">
+                    <a class="btn" href="#popup1">Ambulance</a>
+                </div>
+                <div id="popup1" class="overlay">
+                    <div class="popup">
+                        <h2>List of ambulance service near you</h2>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            <a href="Ambulance/Ambulance.html" class="popupa" target="_blank">CLICK HERE</a>
+                        </div>
+                    </div>
+                </div>
 
 
+                <p>Checkout nearby Ambulance services.</p>
+            </div>
+            <div class="box">
+                <img src="image/blood.png" alt="bloodbank.png">
+                <div class="boxptext">
+                    <a class="btn" href="#popup2">Blood Banks</a>
+                </div>
+                <div id="popup2" class="overlay">
+                    <div class="popup">
+                        <h2>BLood group list. Choose Yours</h2>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            <a href="BloodDatabase2020/abneg.html" class="popupa" target="_blank">AB NEGATIVE</a>
+                            <a href="BloodDatabase2020/abpos.html" class="popupa" target="_blank">AB POSITIVE</a>
+                            <a href="BloodDatabase2020/bneg.html" class="popupa" target="_blank">B NEGATIVE</a>
+                            <a href="BloodDatabase2020/bpos.html" class="popupa" target="_blank">B POSITIVE</a>
+                            <a href="BloodDatabase2020/oneg.html" class="popupa" target="_blank">O NEGATIVE</a>
+                            <a href="BloodDatabase2020/opos.html" class="popupa" target="_blank">O POSITIVE</a>
+                        </div>
+                    </div>
+                </div>
+                <p>Quick look the list of blood groups accordingly..</p>
+            </div>
+            <div class="box">
+                <img src="image/hospital.png" alt="">
+                <div class="boxptext">
+                    <a class="btn" href="#popup3">Hospital</a>
+                </div>
+                <div id="popup3" class="overlay">
+                    <div class="popup">
+                        <h2>List of hospital services</h2>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            <a href="Hospital/Hospital.html" class="popupa" target="_blank">CLICK HERE</a>
+                        </div>
+                    </div>
+                </div>
+                <p>Quick Find Out List of Hospital services.</p>
+            </div>
+
+        </section>
+
+        <!-- about and contact section  -->
+        <section class="about" id="aboutsection">
+            <div>
+                <h2>About Us</h2>
+                <p style="margin-bottom: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quae non eius.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="contactform">
+                <form action="/action_page.php">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">Others</option>
+ 
+                        </select>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+
+                    <input type="submit" value="Submit">
+
+                </form>
+
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rerum omnis totam voluptas.</p>
+        </footer>
+
+    </div>
 
 
 
-        // code from we3scholl
-        // Get the modal
-        var modala = document.getElementById("myModala");
-        var modalb = document.getElementById("myModalb");
-        var modalc = document.getElementById("myModalc");
 
-        // Get the button that opens the modal
-        var btna = document.getElementById("myBtna");
-        var btnb = document.getElementById("myBtnb");
-        var btnc = document.getElementById("myBtnc");
-
-        // Get the <span> element that closes the modal
-        var span1 = document.getElementsByClassName("closea")[0];
-        var span2 = document.getElementsByClassName("closeb")[0];
-        var span3 = document.getElementsByClassName("closec")[0];
-
-        // When the user clicks the button, open the modal 
-        btna.onclick = function() {
-            modala.style.display = "block";
-        }
-        btnb.onclick = function() {
-            modalb.style.display = "block";
-        }
-        btnc.onclick = function() {
-            modalc.style.display = "block";
-        }
-
-
-
-        // When the user clicks on <span> (x), close the modal
-        span1.onclick = function() {
-            modala.style.display = "none";
-        }
-        span2.onclick = function() {
-            modalb.style.display = "none";
-        }
-        span3.onclick = function() {
-            modalc.style.display = "none";
-        }
-
-
-
-        // When the user clicks anywhere outside of the modal, close it
-
-
-        window.onclick = function(event) {
-            if (event.target == modalb) {
-                modalb.style.display = "none";
-
-            }
-        }
-    </script>
 </body>
-
 
 </html>

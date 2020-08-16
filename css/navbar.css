@@ -1,0 +1,79 @@
+.header {
+    /* border: 1px solid green; */
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primary);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    /* position: sticky; */
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+    font-size: 1rem;
+}
+
+nav h4 a {
+    text-decoration: none;
+    color: var(--font);
+}
+
+#navbar ul {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: flex-end;
+}
+
+#navbar ul li {
+    list-style: none;
+}
+
+#navbar ul li a {
+    color: rgb(12, 0, 0);
+    display: block;
+    /* padding: 14px 16px; */
+    border-radius: 7px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--font);
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: rgb(67, 111, 114);
+}
+
+#navbar ul li a {
+    font-size: 1em;
+    /* padding: 0px 7px; */
+    /* padding-bottom: 8px; */
+    padding: 2px 9px;
+}
+
+#navbar a.active {
+    background-color: rgb(67, 111, 114);
+    color: var(--font);
+}
+
+:root {
+    --primary: #ddd;
+    --font: rgb(206, 194, 194);
+    --dark: rgb(43, 42, 42);
+    --light: rgb(206, 194, 194);
+    --shadow: 0 6px 6px rgba(139, 143, 140, 0.8);
+}

@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <link rel="stylesheet" href="../css/navbar.css">
     <style>
         * {
             margin: 0;
@@ -12,139 +13,51 @@
             font-family: Arial, Helvetica, sans-serif;
         }
         
-        body {
-            background-color: rgb(233, 207, 193);
+        .about {
+            background: var(--primary);
+            box-shadow: var(--shadow);
+            display: grid;
+            grid-gap: 30px;
+            grid-template-rows: minmax(100px) 1fr;
+            padding: 3rem;
+            width: 40%;
+            margin: 50px auto;
         }
         
-        .header {
-            /* border: 1px solid green; */
-            background-color: #333;
-            position: fixed;
-            top: 0;
-            left: 0;
+        input[type=text],
+        input[type=email],
+        input[type=password],
+        select,
+        textarea {
             width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
         }
         
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 50px;
-            /* position: sticky; */
-            /* border: 1px solid red; */
-            width: 80%;
-            margin: auto;
-        }
-        
-        nav h4 a {
-            text-decoration: none;
+        input[type=submit] {
+            background-color: var(--dark);
             color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
         
-        #navbar ul {
-            display: flex;
-            font-family: Arial, Helvetica, sans-serif;
-            justify-content: flex-end;
-        }
-        
-        #navbar ul li {
-            list-style: none;
-            font-size: 1.3rem;
-        }
-        
-        #navbar ul li a {
-            color: rgb(12, 0, 0);
-            display: block;
-            /* padding: 14px 16px; */
-            border-radius: 7px;
-            text-decoration: none;
-            text-align: center;
-            color: white;
-        }
-        
-        #navbar ul li a:hover {
-            color: black;
-            background-color: rgb(202, 16, 78);
-        }
-        
-        #navbar ul li a {
-            font-size: 1rem;
-            /* padding: 0px 7px; */
-            /* padding-bottom: 8px; */
-            padding: 8px 16px;
-        }
-        
-        #navbar a.active {
-            background-color: rgb(202, 16, 78);
-            color: white;
-        }
-        
-        .main-body {
-            display: flex;
-            justify-content: center;
-        }
-        
-        .main-div {
-            border: 1px solid gray;
-            width: 500px;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            padding: 50px 0 50px 0;
-        }
-        
-        .content-div {
-            width: 347px;
-        }
-        
-        h1 {
-            color: #19539F;
-        }
-        
-        h2,
-        form {
-            margin-top: 20px;
-        }
-        
-        p,
-        input {
-            margin-top: 10px;
-        }
-        
-        section {
-            margin-top: 20px;
-        }
-        
-        input {
-            width: 100%;
-            height: 32px;
+        input[type=submit]:hover {
+            background-color: #45a049;
         }
         
         .btn {
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        button {
-            padding: 10px 59px;
-            border: none;
-            background-color: transparent;
-            border: #19539F 1px solid;
-        }
-        
-        button:hover {
-            background-color: #19539F;
-            color: white;
-        }
-        
-        .forget-link {
-            margin-top: 30px;
-        }
-        
-        .active {
-            background-color: #19539F;
-            color: white;
-            border: none;
+            background: var(--dark);
+            color: var(--font);
+            padding: 5px;
+            text-decoration: none;
+            border: 0;
         }
     </style>
 </head>
@@ -161,32 +74,27 @@
         </nav>
     </div>
 
-    <section class="main-body">
-        <div class="main-div">
-            <div class="content-div">
-                <h1>Welcome Back!</h1>
-                <h2>Sign in here</h2>
-                <p>to get best hospital recommendetion around you.</p>
-                <form>
-                    <section>
-                        <label for="email">Email</label><br/>
-                        <input type="email" id="email" required/>
-                    </section>
-                    <section>
-                        <label for="password">Password</label><br />
-                        <input type="password" id="password" required/>
-                    </section>
-                    <section class="btn">
-                        <button class="active">Log in</button>
-                        <button><a href="./signup.html">Sign up</a></button>
+    <section class="about" id="aboutsection">
+        <div>
+            <h2>Login Here</h2>
+            <p style="margin-bottom: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quae non eius.</p>
 
-                    </section>
-                    <p class="forget-link"><a href="#">Forget password?</a></p>
-                    <p>
-                        Learn more about our services.<a href="../index.html#contact"><strong> here.</strong></a>
-                    </p>
-                </form>
-            </div>
+        </div>
+        <div class="contactform">
+            <form action="/action_page.php">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="email" placeholder="Enter Your Username..">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="enter your password">
+
+
+
+                <input type="submit" value="Submit">
+                <span class="psw">Forgot <a href="#">password?</a></span>
+
+            </form>
+
         </div>
     </section>
 </body>

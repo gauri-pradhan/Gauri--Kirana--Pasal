@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, Helvetica, Arial, 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(233, 207, 193);
+}
+
+header {
+    /* border: 1px solid green; */
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    /* position: sticky; */
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+}
+
+nav h4 a {
+    text-decoration: none;
+    color: white;
+}
+
+#navbar ul {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: flex-end;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: rgb(12, 0, 0);
+    display: block;
+    /* padding: 14px 16px; */
+    border-radius: 7px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: rgb(202, 16, 78);
+}
+
+#navbar ul li a {
+    font-size: 1rem;
+    /* padding: 0px 7px; */
+    /* padding-bottom: 8px; */
+    padding: 8px 16px;
+}
+
+#navbar a.active {
+    background-color: rgb(202, 16, 78);
+    color: white;
+}
+
+
+/* end of navigation section */
+
+.mainbody {
+    width: 80%;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+
+.middlebody {
+    background-image: url("image/hrs.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slogan {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.tofind {
+    margin-top: 20px;
+}
+
+
+/* .tofind p {
+    margin-right: 10px;
+    display: block;
+    font-size: 24px;
+} */
+
+.btnsignin {
+    padding: 10px 59px;
+    border: none;
+    background-color: #19539F;
+}
+
+.btnsignin a {
+    color: white;
+    text-decoration: none;
+}
+
+.btnsignin:hover {
+    background-color: transparent;
+    border: #19539F 1px solid;
+}
+
+
+/* box section  */
+
+#boxes {
+    /* border: 1px solid black; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    border: 1px solid green;
+    width: 30%;
+    background-color: grey;
+    box-sizing: border-box;
+}
+
+.boximage {
+    display: block;
+    width: 100%;
+    height: 60%;
+    margin: auto;
+    /* border-radius: 40px; */
+    padding-bottom: 10px;
+}
+
+.text {
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.boxtxt {
+    font-size: 15px;
+    padding: 4px;
+}
+
+.text p {
+    margin-top: 10px;
+}
+
+.aboutsection {
+    /* width: 100%; */
+    /* border: 1px solid green; */
+    /* margin-top: 20px; */
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.about {
+    width: 45%;
+    /* height: 200px; */
+    /* border: 1px solid blue; */
+    /* text-align: center; */
+    background-color: grey;
+    padding: 5px 5% 0 5%;
+    box-sizing: border-box;
+}
+
+.aboutimg {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.about h4 {
+    /* align-items: center; */
+    font-size: 30px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.about p {
+    margin-top: 10px;
+}
+
+
+/* contact section starts here */
+
+.container {
+    width: 50%;
+}
+
+#contact {
+    /* background: #dbcaca; */
+    background: grey;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+    font: 400 12px/16px "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+#contact h3 {
+    color: #F96;
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+#contact h4 {
+    margin: 5px 0 15px;
+    display: block;
+    font-size: 13px;
+}
+
+fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 90%;
+    padding: 0;
+    width: 90%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+    width: 100%;
+    border: 1px solid #CCC;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #AAA;
+}
+
+#contact textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+}
+
+#contact button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #0CF;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+    background: #09C;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: 0;
+    border: 1px solid #999;
+}
+
+ ::-webkit-input-placeholder {
+    color: #888;
+}
+
+ :-moz-placeholder {
+    color: #888;
+}
+
+ ::-moz-placeholder {
+    color: #888;
+}
+
+ :-ms-input-placeholder {
+    color: #888;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
