@@ -68,7 +68,7 @@
     .middlebody {
         grid-area: showcase;
         height: 100vh;
-        background: url(image/hrs.jpg);
+        background: url(../image/hrs.jpg);
         background-size: cover;
         background-position: center;
         padding: 3rem;
